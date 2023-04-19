@@ -1,3 +1,4 @@
+------------------------------[Start of Script]-----------------------------------
 if not game:IsLoaded() then
 	local loadedcheck = Instance.new("Message",workspace)
 	loadedcheck.Text = 'Loading...'
@@ -6,10 +7,9 @@ if not game:IsLoaded() then
 end
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "AutoBroly";
-        Text = "Made By zFxnky#2822";
-	Icon = "http://www.roblox.com/asset/?id=5252447892";
-        Duration = 9999990;
+        Title = "###########";
+        Text = "##########";
+        Duration = 999;
         })
 
     local plr = game:GetService("Players").LocalPlayer
@@ -28,7 +28,7 @@ if game.PlaceId == 536102540 then game:GetService("TeleportService"):Teleport(35
 end)
 end
 if HideLvl == true then
-hlvl()
+    hlvl()
 end
 
 function Twn(HRP,Place,Length)
@@ -40,8 +40,9 @@ end
 local Live = game:WaitForChild("Workspace").Live
 local Char = Live:WaitForChild(game.Players.LocalPlayer.Name)
 task.wait(0.1)
+-----------[Quaue]---------------
 if game.PlaceId == 3565304751 then
-task.wait(0)
+task.wait(1)
     	local lplr = game.Players.LocalPlayer.Character
 			lplr.PowerOutput:Destroy()
 
@@ -60,10 +61,10 @@ task.wait(0)
 lplr.HumanoidRootPart.CFrame = CFrame.new(-19.48258972168, 238.05479431152, -886.13696289063)
 	task.wait(17)
  game:GetService("TeleportService"):Teleport(3565304751) end
+------------[Broly's Place]----------------
 if game.PlaceId == 2050207304  then
-   
        game:GetService("Workspace").Live["Broly BR"].UpperTorso.Anchored = true
-	if game.Players.NumPlayers > 99 then game:GetService("TeleportService"):Teleport(3565304751) end	
+	if game.Players.NumPlayers > 2 then game:GetService("TeleportService"):Teleport(3565304751) end	
 
 	local B = Live:WaitForChild("Broly BR")
 	if _G.Other == true then
@@ -89,23 +90,24 @@ if game.PlaceId == 2050207304  then
 		Char.HumanoidRootPart.CFrame = game.Workspace.Live["Broly BR"].HumanoidRootPart.CFrame * CFrame.new(0,0,0.20)
 		Char.HumanoidRootPart.CFrame = CFrame.new(Char.HumanoidRootPart.Position,B.HumanoidRootPart.Position)
 	end)
-    task.wait(1)
+	task.wait(2)
 	game.Players.LocalPlayer.Backpack["Dragon Crush"].Parent = Char
 	Char["Dragon Crush"].Activator["Flip"]:Destroy()
         Char["Dragon Crush"].Activator["Throw"]:Destroy()
         Char["Dragon Crush"].Activator["Blocked"]:Destroy()
         Char["Dragon Crush"].Activator["HitDown"]:Destroy()
         Char["Dragon Crush"].Activator["BoneBreak"]:Destroy()
-	task.wait(0.6)
+	task.wait(0.2)
 	Char["Dragon Crush"]:Activate()
 	task.wait(0.2) 
 	Char["Dragon Crush"]:Deactivate() 
 	Char["Dragon Crush"].Parent = game.Players.LocalPlayer.Backpack
-	task.wait(0.2)
+	task.wait(0.1)
 game:GetService("Workspace").Live["Broly BR"].UpperTorso.Anchored = true
 	repeat game:GetService("RunService").RenderStepped:Wait()
 		if Char.Ki.Value > Char.Ki.MaxValue/20 then 
-			if table.find( v.Name,Moves)then
+			for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+            if table.find(Moves,v.Name)then
 					v.Parent = game:GetService("Workspace").Live[game.Players.LocalPlayer.Name]
 					task.wait()
 					v:Activate() 
@@ -114,20 +116,18 @@ game:GetService("Workspace").Live["Broly BR"].UpperTorso.Anchored = true
 				end 
 			end
  
-		  if Char.Ki.Value < Char.Ki.MaxValue/2 then
+		  elseif Char.Ki.Value < Char.Ki.MaxValue/2 then
 			game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer({[1] = "m2"},CFrame.new(0,0,0),nil,false)
 		end
-                       if _G.Android == true then  
-                          if Char.Ki.Value < Char.Ki.MaxValue/1.7 then
+    if _G.Android == true then  
+        if Char.Ki.Value < Char.Ki.MaxValue/1.7 then
 	         game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("g")
-	           end
-    
-          
+		end      
 	end
+
 	until B.Humanoid.Health < 0.00001
 	game:GetService("TeleportService"):Teleport(3565304751) 
 end 
 game:WaitForChild("CoreGui")
 game.CoreGui:WaitForChild("RobloxPromptGui")
 game.CoreGui.RobloxPromptGui:WaitForChild("promptOverlay")
-
