@@ -1,0 +1,133 @@
+if not game:IsLoaded() then
+	local loadedcheck = Instance.new("Message",workspace)
+	loadedcheck.Text = 'Loading...'
+	game.Loaded:Wait()
+	loadedcheck:Destroy()
+end
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "AutoBroly";
+        Text = "Made By zFxnky#2822";
+	Icon = "http://www.roblox.com/asset/?id=5252447892";
+        Duration = 9999990;
+        })
+
+    local plr = game:GetService("Players").LocalPlayer
+local mouse = plr:GetMouse()
+
+if game.PlaceId == 536102540 then game:GetService("TeleportService"):Teleport(3565304751) end
+  function hlvl()
+    game:service'RunService'.RenderStepped:connect(function()
+    pcall(function()
+       for i,v in next, game:service'Players'.LocalPlayer.Character:children() do
+            if (string.find(tostring(v.Name):lower(), 'lvl.')) then 
+              v:Destroy()
+          end
+       end
+   end)
+end)
+end
+if HideLvl == true then
+hlvl()
+end
+
+function Twn(HRP,Place,Length)
+    local Twn = game:GetService("TweenService"):Create(HRP,
+    TweenInfo.new(Length,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut),{CFrame = Place})
+    Twn:Play()
+    Twn.Completed:Wait()
+end
+local Live = game:WaitForChild("Workspace").Live
+local Char = Live:WaitForChild(game.Players.LocalPlayer.Name)
+task.wait(0.1)
+if game.PlaceId == 3565304751 then
+task.wait(0)
+    	local lplr = game.Players.LocalPlayer.Character
+			lplr.PowerOutput:Destroy()
+
+	lplr.HumanoidRootPart.CFrame = CFrame.new(-757.26867675781, 238, -704.41290283203)
+	task.wait (0.2)
+	Char.LowerTorso:Destroy()
+	local Pads = {}
+    for i,v in pairs(game:WaitForChild("Workspace"):GetChildren()) do
+        if v.Name:find("BrolyTeleport") then		       
+			table.insert(Pads,v)
+        end
+    end
+	
+	local pad = Pads[math.random(1,7)]
+	print(pad.Name)
+lplr.HumanoidRootPart.CFrame = CFrame.new(-19.48258972168, 238.05479431152, -886.13696289063)
+	task.wait(17)
+ game:GetService("TeleportService"):Teleport(3565304751) end
+if game.PlaceId == 2050207304  then
+   
+       game:GetService("Workspace").Live["Broly BR"].UpperTorso.Anchored = true
+	if game.Players.NumPlayers > 99 then game:GetService("TeleportService"):Teleport(3565304751) end	
+
+	local B = Live:WaitForChild("Broly BR")
+	if _G.Other == true then
+		game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer({[1] = "x"},CFrame.new(0,0,0),InputObject)
+			task.wait(5)
+			game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("h")
+			task.wait(1)
+			game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer({[1] = "xoff"},CFrame.new(0,0,0),InputObject)
+	end
+
+   Twn(Char.HumanoidRootPart,B.HumanoidRootPart.CFrame,0)
+	game:GetService("RunService").RenderStepped:connect(function()
+		Char.Humanoid:ChangeState(11)
+            
+		if Char:FindFirstChild("Attacking") then Char.Attacking:Destroy() end
+		if Char:FindFirstChild("Action") then Char.Action:Destroy() end
+		if Char:FindFirstChild("Slow") then Char.Slow:Destroy() end
+		if Char:FindFirstChild("Using") then Char.Using:Destroy() end
+		if Char:FindFirstChild("MoveStart") then Char.MoveStart:Destroy() end
+		if Char.Humanoid.Health < 1.5 then game:GetService("TeleportService"):Teleport(3565304751) end
+		game.Players.LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("Reds")
+		if Char.Humanoid.Health < 50 then game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("h") end
+		Char.HumanoidRootPart.CFrame = game.Workspace.Live["Broly BR"].HumanoidRootPart.CFrame * CFrame.new(0,0,0.20)
+		Char.HumanoidRootPart.CFrame = CFrame.new(Char.HumanoidRootPart.Position,B.HumanoidRootPart.Position)
+	end)
+    task.wait(1)
+	game.Players.LocalPlayer.Backpack["Dragon Crush"].Parent = Char
+	Char["Dragon Crush"].Activator["Flip"]:Destroy()
+        Char["Dragon Crush"].Activator["Throw"]:Destroy()
+        Char["Dragon Crush"].Activator["Blocked"]:Destroy()
+        Char["Dragon Crush"].Activator["HitDown"]:Destroy()
+        Char["Dragon Crush"].Activator["BoneBreak"]:Destroy()
+	task.wait(0.6)
+	Char["Dragon Crush"]:Activate()
+	task.wait(0.2) 
+	Char["Dragon Crush"]:Deactivate() 
+	Char["Dragon Crush"].Parent = game.Players.LocalPlayer.Backpack
+	task.wait(0.2)
+game:GetService("Workspace").Live["Broly BR"].UpperTorso.Anchored = true
+	repeat game:GetService("RunService").RenderStepped:Wait()
+		if Char.Ki.Value > Char.Ki.MaxValue/20 then 
+			if table.find( v.Name,Moves)then
+					v.Parent = game:GetService("Workspace").Live[game.Players.LocalPlayer.Name]
+					task.wait()
+					v:Activate() 
+					v:Deactivate() 
+					v.Parent = game.Players.LocalPlayer.Backpack 
+				end 
+			end
+ 
+		  if Char.Ki.Value < Char.Ki.MaxValue/2 then
+			game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer({[1] = "m2"},CFrame.new(0,0,0),nil,false)
+		end
+                       if _G.Android == true then  
+                          if Char.Ki.Value < Char.Ki.MaxValue/1.7 then
+	         game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("g")
+	           end
+    
+          
+	end
+	until B.Humanoid.Health < 0.00001
+	game:GetService("TeleportService"):Teleport(3565304751) 
+end 
+game:WaitForChild("CoreGui")
+game.CoreGui:WaitForChild("RobloxPromptGui")
+game.CoreGui.RobloxPromptGui:WaitForChild("promptOverlay")
+
