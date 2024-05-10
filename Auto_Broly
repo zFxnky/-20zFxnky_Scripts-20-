@@ -1,6 +1,6 @@
 -- [[ BOOGA AUTOBROLY V10 ]]
 Settings = {
-    Transform = true; -- [[ Will transform you on broly world ]]
+    Transform = false; -- [[ Will transform you on broly world ]]
     ChargeTime = 3; -- [[ Time to charge ]]
     FormType = "h"; -- Form key [h,g] | Applies to DroidForm
     KiTracker = true; -- [[ Your ki attacks will be tracked to broly ]]
