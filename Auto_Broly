@@ -3,7 +3,7 @@ Settings = {
     NamekSlot = "Slot1"; -- Namekian slot that gives points
     WaitTimeSlotChange = 0.3; -- less = faster (Recommended 0.1 - 0.3) Wait time when talking to slot changer
     WaitTimeTalk = 0.250; -- (reccommended 0.1 - 0.3 ) Wait time when talking to level NPCs
-    PersonLimit = 8; -- Person limit for auto rejoiner
+    PersonLimit = 13; -- Person limit for auto rejoiner
     ExtraTime = 0; -- If you need more load time increase the value
     CharacterSlotChangerDelay = 0.3; -- Delay to talk to character slot changer when it finishes talking to kami (0.3 - 0.5 recommended)
     KamiChatDelay = 0.270; -- Delay talking to kami (0.270 - 0.450 recommended)
